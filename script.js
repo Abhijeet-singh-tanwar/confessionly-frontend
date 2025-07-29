@@ -14,7 +14,7 @@ function sendMessage() {
   })
     .then(res => res.json())
     .then(data => {
-      const link = `https://confessionly-backend.onrender.com/confession/${data.id}`;
+      const link = `http://localhost:3000/api/confess/${data.id}`;
       document.getElementById("linkContainer").innerHTML =
         `🎉 Your Confession Link: <a href="${link}" target="_blank">${link}</a>`;
     })
