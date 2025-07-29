@@ -5,7 +5,7 @@ function sendMessage() {
     return;
   }
 
-  fetch("http://localhost:3000/api/confess", {
+  fetch("https://confessionly-backendf.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -14,7 +14,7 @@ function sendMessage() {
   })
     .then(res => res.json())
     .then(data => {
-      const link = `http://localhost:3000/api/confess/${data.id}`;
+      const link = `https://confessionly-backendf.onrender.com/${data.id}`;
       document.getElementById("linkContainer").innerHTML =
         `🎉 Your Confession Link: <a href="${link}" target="_blank">${link}</a>`;
     })
