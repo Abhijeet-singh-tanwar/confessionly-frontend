@@ -5,7 +5,7 @@ function sendMessage() {
     return;
   }
 
-  fetch("https://confessionly-backend.onrender.com/api/confess", {
+  fetch("http://localhost:3000/api/confess", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
